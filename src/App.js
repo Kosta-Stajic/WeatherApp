@@ -1,6 +1,9 @@
 const form = document.querySelector("form");
 const city = document.querySelector("#userInput");
 
+const place = document.querySelector(".location");
+const currentDay = document.querySelector(".today");
+const nextDay = document.querySelector(".tomorrow");
 import { getWeather } from "./fetchAPI";
 
 //Get current Date
@@ -42,4 +45,9 @@ form.addEventListener("submit", async (e) => {
   const cityName = city.value;
   let weatherData = await getWeather(cityName, day1, day2);
   console.log(weatherData);
+  place.textContent = weatherData.location;
+  currentDay.textContent =
+    "Today's Temp:" + " " + weatherData.today.temperature + " F";
+  nextDay.textContent =
+    "Tomorrow's Temp:" + " " + weatherData.tomorrow.temperature + " F";
 });

@@ -8,9 +8,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: antiquewhite;
 }
 
 .container {
+  margin-top: 250px;
+  gap: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,15 +21,41 @@ body {
 }
 
 .weatherInfo {
+  background-color: aliceblue;
   display: flex;
+  flex-grow: 1;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
   gap: 10px;
   height: 400px;
-  width: 600px;
-  border: 2px black solid;
+  width: 800px;
+  border: 1px rgb(206, 205, 205) solid;
   margin: 10px;
   padding: 10px;
 }
 
-form {
+.top {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+span {
+  justify-self: start;
+  align-self: center;
+}
+
+input {
+  background-color: aliceblue;
+  border-radius: 5px;
+  padding: 5px;
+  width: 400px;
+}
+
+button {
+  background-color: aliceblue;
+  border-radius: 5px;
+  padding: 5px;
 }
